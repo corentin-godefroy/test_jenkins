@@ -9,9 +9,7 @@ pipeline {
         stage('Setup Python') {
             steps {
                 sh 'sudo apt-get update'
-                sh 'sudo apt-get install -y python3.11 python3.11-venv python3.11-dev'
-                sh 'curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py'
-                sh 'python3.11 get-pip.py'
+                sh 'sudo apt-get install -y python3.11 python3.11-venv python3.11-dev python3-pip'
             }
         }
         stage('Run Python Script') {
